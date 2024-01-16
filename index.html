@@ -4,77 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senio IT - Coming Soon</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <!-- Import fonts -->
+  <title>Senio-IT - Im Aufbau</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paynes-gray': '#5d737e',
+            'verdigris': '#64b6ac',
+            'celeste': '#c0fdfb',
+            'mint-green': '#daffef',
+            'baby-powder': '#fcfffd'
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
-    :root {
-      --paynes-gray: #5d737e;
-      --verdigris: #64b6ac;
-      --celeste: #c0fdfb;
-      --mint-green: #daffef;
-      --baby-powder: #fcfffd;
-    }
-
-    body {
-      background-color: var(--verdigris);
-      color: var(--paynes-gray);
-    }
-
-    h1 {
-      color: var(--verdigris);
-    }
-
     .responsive-image {
       max-width: 100%;
       height: 140px;
-      max-height 300px;
-    }
-
-    /* Montserrat font for header */
-    .header-font {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    /* Roboto font for content */
-    .content-font {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    /* Keyframe for fade up animation */
-    @keyframes fade-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Apply animation to logo */
-    .logo-animation {
-      animation: fade-up 1s ease-in-out both;
+      max-height: 300px;
     }
   </style>
 </head>
 
-<body class="flex w-full h-full justify-center align-center">
-  <div class="bg-white shadow-md rounded p-8 m-16 flex flex-col">
-    <div class="flex flex-row align-center justify-center">
+<body class="flex w-full h-full justify-center align-center bg-verdigris text-paynes-gray">
+  <div class="shadow-md rounded pt-4 pr-2 pl-2 pb-4 m-4 md:p-8 md:m-16 flex flex-col bg-white">
+    <div class="flex flex-row align-center justify-center pb-4 animate__animated animate__fadeIn">
       <img alt="senio-it-logo" src="./assets/senio-it-logo.svg" class="responsive-image logo-animation" />
     </div>
-    <br /><br />
-    <div class="flex flex-row content-font text-lg">Diese Website befindet sich momentan im Aufbau. Bitte kommen Sie
-      später
-      wieder vorbei!
+    <div class="flex flex-row font-roboto text-lg hyphens-auto">Diese Website befindet sich momentan im
+      Aufbau. Bitte
+      kommen Sie später wieder vorbei!
     </div>
   </div>
 </body>
