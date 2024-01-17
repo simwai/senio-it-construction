@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,24 +36,97 @@
   </script>
 
   <style>
-    .responsive-image {
+    #logo {
       max-width: 100%;
       height: 140px;
+      max-height: 300px;
+    }
+
+    .icon {
+      max-width: 100%;
+      height: 26px;
       max-height: 300px;
     }
   </style>
 </head>
 
 <body class="flex w-full h-full justify-center align-center bg-verdigris text-paynes-gray">
-  <div class="shadow-md rounded pt-4 pr-2 pl-2 pb-4 m-4 md:p-8 md:m-16 flex flex-col bg-white">
-    <div class="flex flex-row align-center justify-center pb-4 animate__animated animate__fadeIn">
-      <img alt="senio-it-logo" src="./assets/senio-it-logo.svg" class="responsive-image logo-animation" />
+  <div id="particles-js" class="w-full h-screen"></div>
+  <div class="absolute shadow-md rounded pt-4 pr-2 pl-2 pb-4 m-4 md:p-8 md:m-16 flex flex-col bg-white">
+    <div class="flex flex-row align-center justify-center pb-6 animate__animated animate__fadeIn">
+      <img id="logo" alt="senio-it-logo" src="./assets/senio-it-logo.svg" class="logo-animation" />
     </div>
-    <div class="flex flex-row font-roboto text-lg hyphens-auto">Diese Website befindet sich momentan im
-      Aufbau. Bitte
-      kommen Sie später wieder vorbei!
+    <div class="flex flex-row font-roboto text-lg hyphens-auto pb-4 text-center align-center justify-center">
+      Diese
+      Website befindet
+      sich momentan im Aufbau.<br />Bitte kommen Sie später wieder vorbei!
+    </div>
+    <div class="flex flex-row font-semibold font-roboto text-lg hyphens-auto justify-center align-center">
+      Ihr Weg zum Rundum-sorglos-Paket für PC, Handy, etc. in Vorarlberg.
+    </div>
+    <div class="flex flex-row font-roboto text-lg hyphens-auto justify-center align-center pt-4">
+      <div class="flex flex-row pr-2">
+        <img alt="email" src="./assets/email.svg" class="icon logo-animation pr-1" />
+        <div>contact@senio-it.at</div>
+      </div>
+      <div class="flex flex-row">
+        <img alt="phone" src="./assets/phone.svg" class="icon logo-animation pr-1" />
+        <div>+43 664 7397 8522</div>
+      </div>
     </div>
   </div>
+
+  <script>
+    particlesJS('particles-js',
+      {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 1000
+            }
+          },
+          "color": {
+            "value": "#5d737e"
+          },
+          "size": {
+            "value": 5,
+            "random": false
+          },
+          "opacity": {
+            "value": 1,
+            "anim": {
+              "enable": true,
+              "speed": 1,
+              "opacity_min": 0.4,
+              "sync": false
+            }
+          },
+          "shape": {
+            "type": "circle",
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "top",
+            "straight": true
+          },
+          "line_linked": {
+            "enable": false
+          },
+          "interactivity": {
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              }
+            }
+          }
+        }
+      }
+    );
+  </script>
 </body>
 
 </html>
