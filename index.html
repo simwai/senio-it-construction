@@ -5,6 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Senio-IT - Im Aufbau</title>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Senio-IT">
+  <meta name="application-name" content="Senio-IT">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +65,7 @@
 
 <body class="flex w-full h-full justify-center align-center bg-verdigris text-paynes-gray">
   <div id="particles-js" class="w-full h-screen"></div>
-  <div class="absolute shadow-md rounded pt-4 pr-2 pl-2 pb-4 m-4 md:p-8 md:m-16 flex flex-col bg-white">
+  <div class="absolute shadow-md rounded p-8 m-8 md:m-16 flex flex-col bg-white">
     <div class="flex flex-row align-center justify-center pb-6 animate__animated animate__fadeIn">
       <img id="logo" alt="senio-it-logo" src="./assets/senio-it-logo.svg" class="logo-animation" />
     </div>
@@ -61,15 +74,15 @@
       Website befindet
       sich momentan im Aufbau.<br />Bitte kommen Sie später wieder vorbei!
     </div>
-    <div class="flex flex-row font-semibold font-roboto text-lg hyphens-auto justify-center align-center">
-      Ihr Weg zum Rundum-sorglos-Paket für PC, Handy, etc. in Vorarlberg.
+    <div class="flex flex-row font-semibold font-roboto text-lg hyphens-auto justify-center align-center pb-4">
+      Ihr Weg zum Rundum-sorglos-Paket für PC, Handy etc. in Vorarlberg.
     </div>
-    <div class="flex flex-row font-roboto text-lg hyphens-auto justify-center align-center pt-4">
-      <div class="flex flex-row pr-2">
+    <div class="flex flex-col sm:flex-row font-roboto text-lg justify-center align-center break-normal hyphens-none">
+      <div class="flex flex-row justify-center align center pr-2">
         <img alt="email" src="./assets/email.svg" class="icon logo-animation pr-1" />
         <div>contact@senio-it.at</div>
       </div>
-      <div class="flex flex-row">
+      <div class="flex flex-row justify-center align center ">
         <img alt="phone" src="./assets/phone.svg" class="icon logo-animation pr-1" />
         <div>+43 664 7397 8522</div>
       </div>
@@ -81,51 +94,104 @@
       {
         "particles": {
           "number": {
-            "value": 80,
+            "value": 50,
             "density": {
               "enable": true,
-              "value_area": 1000
+              "value_area": 5000
             }
           },
           "color": {
             "value": "#5d737e"
           },
-          "size": {
-            "value": 5,
-            "random": false
+          "shape": {
+            "type": "image",
+            "image": {
+              "src": "assets/pure-senio-it-logo.png"
+            }
           },
           "opacity": {
-            "value": 1,
+            "value": 0.17592962814874025,
+            "random": false,
             "anim": {
-              "enable": true,
+              "enable": false,
               "speed": 1,
-              "opacity_min": 0.4,
+              "opacity_min": 0.1,
               "sync": false
             }
           },
-          "shape": {
-            "type": "circle",
+          "size": {
+            "value": 22,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": false,
+            "distance": 200,
+            "color": "#daffef",
+            "opacity": 0.6,
+            "width": 1
           },
           "move": {
             "enable": true,
-            "speed": 2,
+            "speed": 1,
             "direction": "top",
-            "straight": true
-          },
-          "line_linked": {
-            "enable": false
-          },
-          "interactivity": {
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "repulse"
-              }
+            "random": false,
+            "straight": true,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
             }
           }
-        }
-      }
-    );
+        },
+        "interactivity": {
+          "detect_on": "window",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 200,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 1
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
   </script>
 </body>
 
